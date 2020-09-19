@@ -1,6 +1,6 @@
 # Safari Window for L/RHS Tabs (Alfred Workflow)
 
-Move the safari tabs on left/right-hand-side to a new window (excludes the current tab) by hotkeys 
+Move the safari tabs on left/right-hand-side to a new window by hotkeys (excludes the current tab)  
 
 * `⌃` + `⇧` + `L`: move the safari tabs on LHS to a new window
 
