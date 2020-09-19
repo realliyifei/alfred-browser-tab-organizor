@@ -1,6 +1,6 @@
 # Safari Window for L/RHS Tabs (Alfred Workflow)
 
-Move the tabs on left/right-hand-side to a new window (excludes the current tab) 
+Move the safari tabs on left/right-hand-side to a new window (excludes the current tab) 
 
 ## Credits
 
@@ -8,3 +8,8 @@ Move the tabs on left/right-hand-side to a new window (excludes the current tab)
 
 * The icon is from [Open Tabs Icon #296010](https://icon-library.com/icon/open-tabs-icon-19.html).
 
+## Software: Alfred (Mac)
+
+![Alfred Logo](https://i.pinimg.com/originals/5c/23/a6/5c23a6723d3b19e892985fd918cf0aab.png)
+
+The software can be downloaded [here](https://www.alfredapp.com/). You need to [buy the Powerpack](https://buy.alfredapp.com/) to use this workflow.
