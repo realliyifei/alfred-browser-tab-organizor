@@ -24,4 +24,6 @@ The software can be downloaded [here](https://www.alfredapp.com/). You need to [
 * `⌃` + `L`: close the safari tabs on LHS
 * `⌃` + `R`: close the safari tabs on RHS
 * `⌃` + `D`: duplicate the currect tab
+* `⌃` + `D`: reopen the tab via chrome 
+* `⌃` + `P`: reopen the tab in private mode
 * etc.
