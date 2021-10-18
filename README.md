@@ -27,3 +27,4 @@ The software can be downloaded [here](https://www.alfredapp.com/). You need to [
 * `⌃` + `C`: reopen the tab via chrome 
 * `⌃` + `P`: reopen the tab in private mode
 * etc.
+* Extend to other apps such as PDF Expert if possible
