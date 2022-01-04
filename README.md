@@ -13,7 +13,7 @@ Re-organize tabs  in Safari and Chrome:
 
 ## Limitations
 
-Note that I didn't add the function that moves all tabs of *all windows* across browsers, as I don't see how it's useful to me, but you can add it easily via [here](https://gist.github.com/hanneskaeufler/4b94e292372639fde003729726500669) and welcome to push back :)
+Note that I didn't add the function that moves all tabs of *all windows* across browsers, as I don't see how it's useful to me, but you can add it easily via [here](https://gist.github.com/hanneskaeufler/4b94e292372639fde003729726500669) and welcome to pull back :)
 
 I also tried to add the shortcut to move the tab(s) to  private mode (by `⌃` + `P`) but it seems that the accessiblity is restricted, after all, it's *private*.
 
