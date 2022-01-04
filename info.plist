@@ -1,0 +1,1064 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.realliyifei.SafariWindowForLRSHTabs</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>01FA6801-5062-478E-AF4E-4DC75E23D418</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F1A69AEB-7EC9-45A8-A396-51BD45F0D8EA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>17AB295D-F6E3-4482-8EE4-6AC5888E9B24</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6DE316B2-D506-4469-B063-38EE539A7FA2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>323FA264-7A62-412A-A15D-3480D21CD440</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>052A51F7-0C3A-47FE-BAF3-4639307FD66A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>47CB6DEA-62B8-4ACC-ACF6-E91E688614E9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0BF571EF-6995-47B1-995E-DC865DC0B902</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A3142A7E-60A5-484F-B142-47D8EC4AA679</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DFC68AD4-C768-4410-A0E5-41C19C099FAF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D614A1F1-771D-4384-8DEC-4707AB639899</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C69E20D0-AE7F-4394-8F7B-A7100603F805</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EEECF4BE-7ABF-4211-936F-18888256405D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>28ED5905-AE7C-4189-A37F-2743D8E73F46</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F3C99F30-EEB7-4EAE-B69D-EF9443608AF2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AFFF8114-F5BF-49F2-BFE2-79BC4E9BE929</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Li, Yifei</string>
+	<key>description</key>
+	<string>Move the tabs on left/right-handside to a new window (excludes the current tab)</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Safari Window for L/RHS Tabs</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>set app_id to (system attribute "focusedapp")
+
+-- Safari
+if app_id is equal to "com.apple.Safari" then
+	tell application "Safari"
+		set tab_idx to index of current tab of front window
+		close (every tab of front window whose index is not equal to tab_idx)
+	end tell
+
+-- Chrome
+else if app_id is equal to "com.google.Chrome" then
+	try
+    		tell window 1 of application "Google Chrome" to ¬
+        		close (tabs 1 thru (active tab index - 1))
+	    tell window 1 of application "Google Chrome" to ¬
+    		    close (tabs -1 thru (active tab index + 1))
+	end try
+
+end if</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DFC68AD4-C768-4410-A0E5-41C19C099FAF</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focusedapp</string>
+				<key>hotkey</key>
+				<integer>13</integer>
+				<key>hotmod</key>
+				<integer>262144</integer>
+				<key>hotstring</key>
+				<string>W</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.google.Chrome</string>
+					<string>com.apple.Safari</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>A3142A7E-60A5-484F-B142-47D8EC4AA679</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focusedapp</string>
+				<key>hotkey</key>
+				<integer>37</integer>
+				<key>hotmod</key>
+				<integer>262144</integer>
+				<key>hotstring</key>
+				<string>L</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.google.Chrome</string>
+					<string>com.apple.Safari</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>17AB295D-F6E3-4482-8EE4-6AC5888E9B24</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>set app_id to (system attribute "focusedapp")
+
+-- Safari
+if app_id is equal to "com.apple.Safari" then
+	tell application "Safari"
+		set tab_index to index of current tab of front window
+		close tabs (tab_index - 1) thru 0 of front window
+	end tell
+
+-- Chrome
+else if app_id is equal to "com.google.Chrome" then
+	try
+    		tell window 1 of application "Google Chrome" to ¬
+        		close (tabs 1 thru (active tab index - 1))
+	end try
+
+end if</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>6DE316B2-D506-4469-B063-38EE539A7FA2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>set app_id to (system attribute "focusedapp")
+
+-- Safari
+if app_id is equal to "com.apple.Safari" then
+	tell application "Safari"
+		set tab_index to index of current tab of front window
+		close tabs (tab_index + 1) thru -1 of front window
+	end tell
+
+-- Chrome
+else if app_id is equal to "com.google.Chrome" then
+	try
+    		tell window 1 of application "Google Chrome" to ¬
+        		close (tabs -1 thru (active tab index + 1))
+	end try
+
+end if</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>052A51F7-0C3A-47FE-BAF3-4639307FD66A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focusedapp</string>
+				<key>hotkey</key>
+				<integer>15</integer>
+				<key>hotmod</key>
+				<integer>262144</integer>
+				<key>hotstring</key>
+				<string>R</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.google.Chrome</string>
+					<string>com.apple.Safari</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>323FA264-7A62-412A-A15D-3480D21CD440</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focusedapp</string>
+				<key>hotkey</key>
+				<integer>2</integer>
+				<key>hotmod</key>
+				<integer>262144</integer>
+				<key>hotstring</key>
+				<string>D</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.google.Chrome</string>
+					<string>com.apple.Safari</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>EEECF4BE-7ABF-4211-936F-18888256405D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>set app_id to (system attribute "focusedapp")
+
+-- Safari
+if app_id is equal to "com.apple.Safari" then
+
+	tell application "Safari"
+		set theURL to URL of current tab of front window
+		tell front window to make new tab with properties {URL:theURL}
+	end tell
+
+-- Chrome
+else if app_id is equal to "com.google.Chrome" then
+
+	tell application "Google Chrome" 
+		set theURL to URL of active tab of front window
+		open location theURL
+	end tell
+
+end if</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>28ED5905-AE7C-4189-A37F-2743D8E73F46</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>set app_id to (system attribute "focusedapp")
+
+-- Safari
+if app_id is equal to "com.apple.Safari" then
+	tell application "Safari"
+		set original_window to front window
+		set tab_idx to index of current tab of original_window
+	
+		make new document
+		move tabs (tab_idx - 1) thru 0 of original_window to front window
+		close first tab of front window
+	end tell
+
+-- Chrome
+else if app_id is equal to "com.google.Chrome" then
+	tell application "Google Chrome"
+
+		set original_window to front window
+		set tab_idx to active tab index of original_window
+	
+		if tab_idx &gt; 1 then
+			make new window
+			repeat with i from 1 to (tab_idx - 1)
+				set theURL to URL of tab i of original_window
+				close tab i of original_window
+				tell front window to make new tab with properties {URL:theURL}
+			end repeat
+			close tab 1 of front window
+		end if
+	end tell
+
+end if</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>AFFF8114-F5BF-49F2-BFE2-79BC4E9BE929</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focusedapp</string>
+				<key>hotkey</key>
+				<integer>37</integer>
+				<key>hotmod</key>
+				<integer>393216</integer>
+				<key>hotstring</key>
+				<string>L</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.google.Chrome</string>
+					<string>com.apple.Safari</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>F3C99F30-EEB7-4EAE-B69D-EF9443608AF2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>set app_id to (system attribute "focusedapp")
+
+-- Safari
+if app_id is equal to "com.apple.Safari" then
+	tell application "Safari"
+		set theURL to URL of current tab of front window
+		close current tab of front window
+	end tell
+	tell application "Google Chrome"
+    		if not (exists window 1) then reopen
+	    set URL of active tab of window 1 to theURL
+	end tell
+
+-- Chrome
+else if app_id is equal to "com.google.Chrome" then
+	tell application "Google Chrome"
+		set theURL to URL of active tab of front window
+		close active tab of front window
+	end tell
+	tell application "Safari"
+    		if not (exists window 1) then reopen
+	    set URL of current tab of window 1 to theURL
+	end tell
+
+
+end if</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F1A69AEB-7EC9-45A8-A396-51BD45F0D8EA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focusedapp</string>
+				<key>hotkey</key>
+				<integer>8</integer>
+				<key>hotmod</key>
+				<integer>262144</integer>
+				<key>hotstring</key>
+				<string>C</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.google.Chrome</string>
+					<string>com.apple.Safari</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>01FA6801-5062-478E-AF4E-4DC75E23D418</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>set app_id to (system attribute "focusedapp")
+
+-- Safari
+if app_id is equal to "com.apple.Safari" then
+	tell application "Safari"
+		set original_window to front window
+		set tab_idx to index of current tab of original_window
+		
+		make new document
+		move tabs (tab_idx + 1) thru -1 of original_window to front window
+		close first tab of front window
+	end tell
+
+-- Chrome
+else if app_id is equal to "com.google.Chrome" then
+	tell application "Google Chrome"
+	
+		set original_window to front window
+		set tab_idx to active tab index of original_window
+		set tab_num to count of tabs of original_window
+	
+		if tab_idx &lt; tab_num then	
+			make new window
+			repeat with i from (tab_idx + 1) to tab_num
+				set theURL to URL of tab i of original_window
+				close tab i of original_window
+				tell front window to make new tab with properties {URL:theURL}
+			end repeat
+			close tab 1 of front window
+		end if
+	end tell
+
+end if</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>0BF571EF-6995-47B1-995E-DC865DC0B902</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focusedapp</string>
+				<key>hotkey</key>
+				<integer>15</integer>
+				<key>hotmod</key>
+				<integer>393216</integer>
+				<key>hotstring</key>
+				<string>R</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.google.Chrome</string>
+					<string>com.apple.Safari</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>47CB6DEA-62B8-4ACC-ACF6-E91E688614E9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focusedapp</string>
+				<key>hotkey</key>
+				<integer>8</integer>
+				<key>hotmod</key>
+				<integer>393216</integer>
+				<key>hotstring</key>
+				<string>C</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.google.Chrome</string>
+					<string>com.apple.Safari</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>D614A1F1-771D-4384-8DEC-4707AB639899</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>set app_id to (system attribute "focusedapp")
+
+-- Safari
+if app_id is equal to "com.apple.Safari" then
+
+	tell application "Safari"
+		set URLs to {}
+		repeat with theTab in every tab of front window
+			set URLs to URLs &amp; {the theTab's URL}
+		end repeat
+		close front window
+	end tell
+
+	tell application "Google Chrome"
+		make new window
+		activate
+		repeat with URL in URLs
+			open location URL	
+		end repeat
+	end tell
+
+-- Chrome
+else if app_id is equal to "com.google.Chrome" then
+
+	tell application "Google Chrome"
+		set URLs to {}
+		repeat with theTab in every tab of front window
+			set URLs to URLs &amp; {the theTab's URL}
+		end repeat
+		close front window
+	end tell
+
+	tell application "Safari"
+		make new document
+		activate
+		repeat with URL in URLs
+			open location URL	
+		end repeat
+		close tab 1 of front window
+	end tell
+
+end if</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C69E20D0-AE7F-4394-8F7B-A7100603F805</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
+readonly remote_info_plist=''
+readonly workflow_url='realliyifei/alfred-browser-tab-and-window'
+readonly download_type='github_release'
+readonly frequency_check='7'
+
+# FROM HERE ON, CODE SHOULD BE LEFT UNTOUCHED!
+function abort {
+  echo "${1}" &gt;&amp;2
+  exit 1
+}
+
+function url_exists {
+  curl --silent --location --output /dev/null --fail --range 0-0 "${1}"
+}
+
+function notification {
+  local -r notificator="$(find . -type d -name 'Notificator.app')"
+  if [[ -n "${notificator}" ]]; then
+    "${notificator}/Contents/Resources/Scripts/notificator" --message "${1}" --title "${alfred_workflow_name}" --subtitle 'A new version is available'
+    return
+  fi
+
+  local -r terminal_notifier="$(find . -type f -name 'terminal-notifier')"
+  if [[ -n "${terminal_notifier}" ]]; then
+    "${terminal_notifier}" -title "${alfred_workflow_name}" -subtitle 'A new version is available' -message "${1}"
+    return
+  fi
+
+  osascript -e "display notification \"${1}\" with title \"${alfred_workflow_name}\" subtitle \"A new version is available\""
+}
+
+# Local sanity checks
+readonly local_info_plist='info.plist'
+readonly local_version="$(/usr/libexec/PlistBuddy -c 'print version' "${local_info_plist}")"
+
+[[ -n "${local_version}" ]] || abort 'You need to set a workflow version in the configuration sheet.'
+[[ "${download_type}" =~ ^(direct|page|github_release)$ ]] || abort "'download_type' (${download_type}) needs to be one of 'direct', 'page', or 'github_release'."
+[[ "${frequency_check}" =~ ^[0-9]+$ ]] || abort "'frequency_check' (${frequency_check}) needs to be a number."
+
+# Check for updates
+if [[ $(find "${local_info_plist}" -mtime +"${frequency_check}"d) ]]; then
+  if ! url_exists "${remote_info_plist}"; then abort "'remote_info_plist' (${remote_info_plist}) appears to not be reachable."; fi # Remote sanity check
+
+  readonly tmp_file="$(mktemp)"
+  curl --silent --location --output "${tmp_file}" "${remote_info_plist}"
+  readonly remote_version="$(/usr/libexec/PlistBuddy -c 'print version' "${tmp_file}")"
+
+  if [[ "${local_version}" == "${remote_version}" ]]; then
+    touch "${local_info_plist}" # Reset timer by touching local file
+    exit 0
+  fi
+
+  if [[ "${download_type}" == 'page' ]]; then
+    notification 'Opening download page…'
+    open "${workflow_url}"
+    exit 0
+  fi
+
+  download_url="$([[ "${download_type}" == 'github_release' ]] &amp;&amp; curl --silent "https://api.github.com/repos/${workflow_url}/releases/latest" | grep 'browser_download_url' | head -1 | sed -E 's/.*browser_download_url": "(.*)"/\1/' || echo "${workflow_url}")"
+
+  if url_exists "${download_url}"; then
+    notification 'Downloading and installing…'
+    curl --silent --location --output "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow" "${download_url}"
+    open "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow"
+  else
+    abort "'workflow_url' (${download_url}) appears to not be reachable."
+  fi
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>4A707B2A-E06C-4A87-9C06-FC237198DABE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Move the tabs on left/right-handside to a new window (excludes the current tab)
+
+More info on website: https://github.com/realliyifei/Alfred-Safari-Window-for-LRHS-Tabs</string>
+	<key>uidata</key>
+	<dict>
+		<key>01FA6801-5062-478E-AF4E-4DC75E23D418</key>
+		<dict>
+			<key>xpos</key>
+			<integer>590</integer>
+			<key>ypos</key>
+			<integer>355</integer>
+		</dict>
+		<key>052A51F7-0C3A-47FE-BAF3-4639307FD66A</key>
+		<dict>
+			<key>note</key>
+			<string>Close right tabs</string>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>210</integer>
+		</dict>
+		<key>0BF571EF-6995-47B1-995E-DC865DC0B902</key>
+		<dict>
+			<key>note</key>
+			<string>Move right tabs to new window</string>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>495</integer>
+		</dict>
+		<key>17AB295D-F6E3-4482-8EE4-6AC5888E9B24</key>
+		<dict>
+			<key>xpos</key>
+			<integer>30</integer>
+			<key>ypos</key>
+			<integer>70</integer>
+		</dict>
+		<key>28ED5905-AE7C-4189-A37F-2743D8E73F46</key>
+		<dict>
+			<key>note</key>
+			<string>Duplicate current tab</string>
+			<key>xpos</key>
+			<integer>955</integer>
+			<key>ypos</key>
+			<integer>215</integer>
+		</dict>
+		<key>323FA264-7A62-412A-A15D-3480D21CD440</key>
+		<dict>
+			<key>xpos</key>
+			<integer>30</integer>
+			<key>ypos</key>
+			<integer>210</integer>
+		</dict>
+		<key>47CB6DEA-62B8-4ACC-ACF6-E91E688614E9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>40</integer>
+			<key>ypos</key>
+			<integer>495</integer>
+		</dict>
+		<key>4A707B2A-E06C-4A87-9C06-FC237198DABE</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>12</integer>
+			<key>note</key>
+			<string>OneUpdater</string>
+			<key>xpos</key>
+			<integer>45</integer>
+			<key>ypos</key>
+			<integer>665</integer>
+		</dict>
+		<key>6DE316B2-D506-4469-B063-38EE539A7FA2</key>
+		<dict>
+			<key>note</key>
+			<string>Close left tabs</string>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>70</integer>
+		</dict>
+		<key>A3142A7E-60A5-484F-B142-47D8EC4AA679</key>
+		<dict>
+			<key>xpos</key>
+			<integer>595</integer>
+			<key>ypos</key>
+			<integer>70</integer>
+		</dict>
+		<key>AFFF8114-F5BF-49F2-BFE2-79BC4E9BE929</key>
+		<dict>
+			<key>note</key>
+			<string>Move left tabs to new window</string>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>345</integer>
+		</dict>
+		<key>C69E20D0-AE7F-4394-8F7B-A7100603F805</key>
+		<dict>
+			<key>note</key>
+			<string>Open all tabs in current window from Chrome to Safari, or vice versa</string>
+			<key>xpos</key>
+			<integer>955</integer>
+			<key>ypos</key>
+			<integer>520</integer>
+		</dict>
+		<key>D614A1F1-771D-4384-8DEC-4707AB639899</key>
+		<dict>
+			<key>xpos</key>
+			<integer>595</integer>
+			<key>ypos</key>
+			<integer>520</integer>
+		</dict>
+		<key>DFC68AD4-C768-4410-A0E5-41C19C099FAF</key>
+		<dict>
+			<key>note</key>
+			<string>close all other tabs in current window</string>
+			<key>xpos</key>
+			<integer>955</integer>
+			<key>ypos</key>
+			<integer>70</integer>
+		</dict>
+		<key>EEECF4BE-7ABF-4211-936F-18888256405D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>595</integer>
+			<key>ypos</key>
+			<integer>215</integer>
+		</dict>
+		<key>F1A69AEB-7EC9-45A8-A396-51BD45F0D8EA</key>
+		<dict>
+			<key>note</key>
+			<string>Open current tab from Chrome to Safari, or vice versa</string>
+			<key>xpos</key>
+			<integer>955</integer>
+			<key>ypos</key>
+			<integer>355</integer>
+		</dict>
+		<key>F3C99F30-EEB7-4EAE-B69D-EF9443608AF2</key>
+		<dict>
+			<key>xpos</key>
+			<integer>35</integer>
+			<key>ypos</key>
+			<integer>345</integer>
+		</dict>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.1.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/realliyifei/Alfred-Safari-Window-for-LRHS-Tabs</string>
+</dict>
+</plist>
