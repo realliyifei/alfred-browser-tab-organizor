@@ -1,3 +1,8 @@
+<h1 align="center">
+  <img src="./icon.png" width="128" height="128">
+</h1>
+
+
 # Browser Tab Organizor (Alfred Workflow)
 
 Re-organize tabs  in Safari and Chrome:
