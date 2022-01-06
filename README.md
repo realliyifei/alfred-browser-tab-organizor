@@ -5,7 +5,7 @@
 
 # Browser Tab Organizor (Alfred Workflow)
 
-Re-organize tabs in Safari and Chrome: close, move, duplicate, convert, etc.:
+Re-organize tabs in Safari and Chrome - close, move, duplicate, convert, etc.:
 
 * `⌃` + `L`: close left tabs
 * `⌃` + `R`: close right tabs
