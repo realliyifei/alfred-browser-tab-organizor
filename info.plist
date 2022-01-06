@@ -116,11 +116,11 @@
 	<key>createdby</key>
 	<string>Li, Yifei</string>
 	<key>description</key>
-	<string>Re-organize tabs in Safari and Chrome</string>
+	<string>Re-organize tabs in Safari and Chrome: close, move, duplicate, convert, etc.</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Browser Tab Organizor</string>
+	<string>BrowserTabOrganizor</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -909,13 +909,15 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Re-organize tabs in Safari and Chrome
+	<string>Re-organize tabs in Safari and Chrome: close, move, duplicate, convert, etc.
 
 More info on website: https://github.com/realliyifei/alfred-browser-tab-organizor</string>
 	<key>uidata</key>
 	<dict>
 		<key>01FA6801-5062-478E-AF4E-4DC75E23D418</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
 			<key>xpos</key>
 			<integer>590</integer>
 			<key>ypos</key>
@@ -923,6 +925,8 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 		</dict>
 		<key>052A51F7-0C3A-47FE-BAF3-4639307FD66A</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
 			<key>note</key>
 			<string>Close right tabs</string>
 			<key>xpos</key>
@@ -932,6 +936,8 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 		</dict>
 		<key>0BF571EF-6995-47B1-995E-DC865DC0B902</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
 			<key>note</key>
 			<string>Move right tabs to new window</string>
 			<key>xpos</key>
@@ -941,6 +947,8 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 		</dict>
 		<key>17AB295D-F6E3-4482-8EE4-6AC5888E9B24</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
@@ -948,6 +956,8 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 		</dict>
 		<key>28ED5905-AE7C-4189-A37F-2743D8E73F46</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
 			<key>note</key>
 			<string>Duplicate current tab</string>
 			<key>xpos</key>
@@ -957,6 +967,8 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 		</dict>
 		<key>323FA264-7A62-412A-A15D-3480D21CD440</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
@@ -964,6 +976,8 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 		</dict>
 		<key>47CB6DEA-62B8-4ACC-ACF6-E91E688614E9</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
 			<key>xpos</key>
 			<integer>40</integer>
 			<key>ypos</key>
@@ -982,6 +996,8 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 		</dict>
 		<key>6DE316B2-D506-4469-B063-38EE539A7FA2</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
 			<key>note</key>
 			<string>Close left tabs</string>
 			<key>xpos</key>
@@ -991,6 +1007,8 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 		</dict>
 		<key>A3142A7E-60A5-484F-B142-47D8EC4AA679</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
 			<key>xpos</key>
 			<integer>595</integer>
 			<key>ypos</key>
@@ -998,6 +1016,8 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 		</dict>
 		<key>AFFF8114-F5BF-49F2-BFE2-79BC4E9BE929</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
 			<key>note</key>
 			<string>Move left tabs to new window</string>
 			<key>xpos</key>
@@ -1007,6 +1027,8 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 		</dict>
 		<key>C69E20D0-AE7F-4394-8F7B-A7100603F805</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
 			<key>note</key>
 			<string>Move all tabs in current window from Safari to Chrome, or vice versa</string>
 			<key>xpos</key>
@@ -1016,6 +1038,8 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 		</dict>
 		<key>D614A1F1-771D-4384-8DEC-4707AB639899</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
 			<key>xpos</key>
 			<integer>590</integer>
 			<key>ypos</key>
@@ -1023,6 +1047,8 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 		</dict>
 		<key>DFC68AD4-C768-4410-A0E5-41C19C099FAF</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
 			<key>note</key>
 			<string>close all other tabs in current window</string>
 			<key>xpos</key>
@@ -1032,6 +1058,8 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 		</dict>
 		<key>EEECF4BE-7ABF-4211-936F-18888256405D</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
 			<key>xpos</key>
 			<integer>595</integer>
 			<key>ypos</key>
@@ -1039,6 +1067,8 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 		</dict>
 		<key>F1A69AEB-7EC9-45A8-A396-51BD45F0D8EA</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
 			<key>note</key>
 			<string>Move current tab from Safari to Chrome, or vice versa</string>
 			<key>xpos</key>
@@ -1048,6 +1078,8 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 		</dict>
 		<key>F3C99F30-EEB7-4EAE-B69D-EF9443608AF2</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
 			<key>xpos</key>
 			<integer>35</integer>
 			<key>ypos</key>
@@ -1057,7 +1089,7 @@ More info on website: https://github.com/realliyifei/alfred-browser-tab-organizo
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>2.0.0</string>
+	<string>2.1.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/realliyifei/alfred-browser-tab-organizor</string>
 </dict>
