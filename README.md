@@ -12,7 +12,8 @@ Re-organize tabs in Safari and Chrome - close, move, duplicate, convert, etc.:
 * `⌃` + `⇧` + `L`: move left tabs to new window
 * `⌃` + `⇧` + `R`: move right tabs to new window
 * `⌃` + `W`: close all other tabs in current window
-* `⌃` + `D`: duplicate current tab
+* `⌃` + `D`: duplicate current tab to the adjacent tab
+* `⌃` + `⇧`  + `D`: duplicate current tab to the last tab
 * `⌃` + `C`: move current tab from Safari to Chrome, or vice versa
 * `⌃` + `⇧` + `C`: move all tabs in current window from Safari to Chrome, or vice versa
 
