@@ -33,6 +33,8 @@ Download alfredworkflow file directly from [the releases page](https://github.co
 
 The software can be downloaded [here](https://www.alfredapp.com/). You need to [buy the Powerpack](https://buy.alfredapp.com/) to use this workflow.
 
+Note that if you don't want to buy the software, or just need the AppleScript for other purposes, you can find the corrosponding AppleScript of each function in [info.plist](info.plist).
+
 ## Credits
 
 * This workflow is inspired by the safari extension [yuanzhoucq/Tab-Space](https://github.com/yuanzhoucq/Tab-Space) and @gingerbeardman’s suggestion ([Tab-Space's issue 39](https://github.com/yuanzhoucq/Tab-Space/issues/39)).
