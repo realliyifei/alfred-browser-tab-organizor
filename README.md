@@ -17,11 +17,13 @@ Re-organize tabs in Safari and Chrome - close, move, duplicate, convert, etc.:
 * `⌃` + `C`: move current tab from Safari to Chrome, or vice versa
 * `⌃` + `⇧` + `C`: move all tabs in current window from Safari to Chrome, or vice versa
 
+Coming later:
+
+* `⌃` + `P`: move current tab to the private mode
+
 ## Limitations
 
 Note that I didn't add the function that moves all tabs of *all windows* across browsers, as I don't see how it's useful to me, but you can add it easily via [here](https://gist.github.com/hanneskaeufler/4b94e292372639fde003729726500669) and welcome to pull back :)
-
-I also tried to add the shortcut to move the tab(s) to  private mode (by `⌃` + `P`) but it seems that the accessiblity is restricted, after all, it's *private*.
 
 ## Download
 
@@ -40,3 +42,5 @@ Note that if you don't want to buy the software, or just need the AppleScript fo
 * This workflow is inspired by the safari extension [yuanzhoucq/Tab-Space](https://github.com/yuanzhoucq/Tab-Space) and @gingerbeardman’s suggestion ([Tab-Space's issue 39](https://github.com/yuanzhoucq/Tab-Space/issues/39)).
 
 * The icon is from [Open Tabs Icon #296010](https://icon-library.com/icon/open-tabs-icon-19.html).
+
+* Also, see another safari-specific workflow [here](https://www.alfredforum.com/topic/10921-safari-assistant/#comments), though it's sort of aborted :(
