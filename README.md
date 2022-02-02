@@ -20,7 +20,7 @@ Re-organize tabs in Safari and Chrome - close, move, duplicate, convert, etc.:
 
 ## Limitations
 
-Note that I didn't add the function that moves all tabs of *all windows* across browsers, as I don't see how it's useful to me, but you can add it easily via [here](https://gist.github.com/hanneskaeufler/4b94e292372639fde003729726500669) and welcome to pull back :)
+Note that I didn't add the feature that moves all tabs of *all windows* across browsers, as I don't see how it's useful to me, but you can add it easily via [here](https://gist.github.com/hanneskaeufler/4b94e292372639fde003729726500669) and welcome to pull back :)
 
 ## Download
 
@@ -32,7 +32,7 @@ Download alfredworkflow file directly from [the releases page](https://github.co
 
 The software can be downloaded [here](https://www.alfredapp.com/). You need to [buy the Powerpack](https://buy.alfredapp.com/) to use this workflow.
 
-Note that if you don't want to buy the software, or just need the AppleScript for other purposes, you can find the corrosponding AppleScript of each function in [info.plist](info.plist).
+Note that if you don't want to buy the software, or just need the AppleScript for other purposes, you can find the corrosponding AppleScript of each feature in [info.plist](info.plist).
 
 ## Credits
 
