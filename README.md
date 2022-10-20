@@ -18,6 +18,12 @@ Re-organize tabs in Safari and Chrome - close, move, duplicate, convert, etc.:
 * `⌃` + `⇧` + `C`: move all tabs in current window from Safari to Chrome, or vice versa
 * `⌃` + `P`: move current tab to the private mode
 
+TODO
+
+* `⌃` + `⇧` + `P`: duplicate current tab to the private mode
+* `⌃` + `⇧` + `K`: move all tabs of current window back to the next lastest window as left tabs
+* `⌃` + `⇧` + `E`: move all tabs of current window back to the next lastest window as right tabs
+
 ## Limitations
 
 Note that I didn't add the feature that moves all tabs of *all windows* across browsers, as I don't see how it's useful to me, but you can add it easily via [here](https://gist.github.com/hanneskaeufler/4b94e292372639fde003729726500669) and welcome to pull back :)
