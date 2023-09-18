@@ -24,6 +24,7 @@ TODO
 * `⌃` + `⇧` + `P`: duplicate current tab to the private mode
 * `⌃` + `⇧` + `K`: move all tabs of current window back to the next lastest window as left tabs
 * `⌃` + `⇧` + `E`: move all tabs of current window back to the next lastest window as right tabs
+* `⌃` + `M`: re-open current tab in a new window
 
 ## Limitations
 
